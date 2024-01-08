@@ -209,7 +209,7 @@ namespace KaveGep
             do
             {
 
-            } while (Convert.ToInt32(Fizetendo.Text) != 0);
+            } while (berakottpenz != 0);
         }
     }
 }
