@@ -1,0 +1,60 @@
+﻿<Window x:Class="KaveGep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KaveGep"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="590" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Center" Height="512" Width="256" Source="/img/automata.png" Margin="10,0,0,0" />
+        <Button x:Name="Gomb1" HorizontalAlignment="Left" Margin="78,80,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb1_Click">
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 1 120ft</TextBlock>
+        </Button>
+        <Button x:Name="Gomb2" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb2_Click">
+            <TextBlock TextWrapping="Wrap" Height="30" Width="40" FontSize="10" TextAlignment="Center">Kávé 2 220ft</TextBlock>
+        </Button>
+        <Button x:Name="Gomb3" HorizontalAlignment="Left" Margin="78,118,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb3_Click">
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 3 100ft</TextBlock>
+        </Button>
+        <Button x:Name="Gomb4" HorizontalAlignment="Left" Margin="150,118,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb4_Click">
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 4 155ft</TextBlock>
+        </Button>
+        <TextBlock x:Name="Fizetendo" HorizontalAlignment="Left" Margin="146,168,0,0" VerticalAlignment="Top" Height="32" Width="44" FontSize="20">
+
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="182,168,0,0" VerticalAlignment="Top" Height="32" Width="24" FontSize="20">
+            Ft
+        </TextBlock>
+        <Button x:Name="PenzNyilas" HorizontalAlignment="Left" Margin="225,167,0,0" VerticalAlignment="Top" Height="34" Width="10" Background="#FF707070" BorderBrush="Black" Click="PenzNyilas_Click"/>
+        <Button x:Name="Reset" HorizontalAlignment="Left" Margin="236,179,0,0" VerticalAlignment="Top" Height="10" Width="10" Background="#FF707070" BorderBrush="Black" Click="Reset_Click"/>
+
+        <Button x:Name="_5ft" HorizontalAlignment="Left" Height="90" Margin="285,15,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_5ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/5Ft.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="_10ft" HorizontalAlignment="Left" Height="90" Margin="285,100,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_10ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/10Ft.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="_20ft" HorizontalAlignment="Left" Height="90" Margin="285,185,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_20ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/20Ft.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="_50ft" HorizontalAlignment="Left" Height="90" Margin="285,270,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_50ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/50Ft.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="_100ft" HorizontalAlignment="Left" Height="90" Margin="285,355,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_100ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/100Ft.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="_200ft" HorizontalAlignment="Left" Height="90" Margin="285,440,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_200ft_Click">
+            <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/200Ft.png" Stretch="Fill"/>
+        </Button>
+        <Image x:Name="kvkep" HorizontalAlignment="Left" Height="100" Margin="90,309,0,0" VerticalAlignment="Top" Width="100" Source="/img/kv.png" OpacityMask="#7F000000" MouseUp="kvkep_MouseUp"/>
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
