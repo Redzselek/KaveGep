@@ -33,55 +33,100 @@ namespace KaveGep
         public MainWindow()
         {
             InitializeComponent();
-            kvkep.Opacity = 0;
+            kvkep.Visibility = Visibility.Hidden;
         }
 
-        private void Gomb1_Click(object sender, RoutedEventArgs e)
+        private async void Gomb1_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (berakottpenz > 120)
+
+            if (berakottpenz >= 120 && !kvkep.IsVisible)
             {
-                Fizetendo.Text = Convert.ToString(berakottpenz - 120);
+                berakottpenz -= 120;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
+                Visszaad();
                 SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
                 player.Load();
                 player.Play();
-                Thread.Sleep(10000);
-                kvkep.Opacity = 100;
+                await Task.Delay(10000);
+                kvkep.Visibility = Visibility.Visible;
+            }
+            else if (kvkep.IsVisible)
+            {
+                MessageBox.Show("Van még kitöltött kávé a gépben", "Hiba");
+            }
+            else
+            {
+                MessageBox.Show("Nincs elég pénzed, tegyél be még többet", "Hiba");
+            }
+        }
+        
+        private async void Gomb2_Click(object sender, RoutedEventArgs e)
+        {
+            if (berakottpenz >= 220 && !kvkep.IsVisible)
+            {   
+                berakottpenz -= 220;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
+                SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
+                player.Load();
+                player.Play();
+                await Task.Delay(10000);
+                kvkep.Visibility = Visibility.Visible;
                 Visszaad();
+            }
+            else if (kvkep.IsVisible)
+            {
+                MessageBox.Show("Van még kitöltött kávé a gépben", "Hiba");
+            }
+            else
+            {
+                MessageBox.Show("Nincs elég pénzed, tegyél be még többet", "Hiba");
             }
         }
 
-        private void Gomb2_Click(object sender, RoutedEventArgs e)
+        private async void Gomb3_Click(object sender, RoutedEventArgs e)
         {
-            Fizetendo.Text = Convert.ToString(berakottpenz - 220);
-            SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
-            player.Load();
-            player.Play();
-            Thread.Sleep(10000);
-            kvkep.Opacity = 100;
-            Visszaad();
+            if (berakottpenz >= 100 && !kvkep.IsVisible)
+            {
+                berakottpenz -= 100;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
+                SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
+                player.Load();
+                player.Play();
+                await Task.Delay(10000);
+                kvkep.Visibility = Visibility.Visible;
+                Visszaad();
+            }
+            else if (kvkep.IsVisible)
+            {
+                MessageBox.Show("Van még kitöltött kávé a gépben", "Hiba");
+            }
+            else
+            {
+                MessageBox.Show("Nincs elég pénzed, tegyél be még többet", "Hiba");
+            }
         }
 
-        private void Gomb3_Click(object sender, RoutedEventArgs e)
+        private async void Gomb4_Click(object sender, RoutedEventArgs e)
         {
-            Fizetendo.Text = Convert.ToString(berakottpenz - 100);
-            SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
-            player.Load();
-            player.Play();
-            Thread.Sleep(10000);
-            kvkep.Opacity = 100;
-            Visszaad();
-        }
-
-        private void Gomb4_Click(object sender, RoutedEventArgs e)
-        {
-            Fizetendo.Text = Convert.ToString(berakottpenz - 155);
-            SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
-            player.Load();
-            player.Play();
-            Thread.Sleep(10000);
-            kvkep.Opacity = 100;
-            Visszaad();
+            if (berakottpenz >= 155 && !kvkep.IsVisible)
+            {   
+                berakottpenz -= 155; 
+                Fizetendo.Text = Convert.ToString(berakottpenz);
+                SoundPlayer player = new SoundPlayer(@"sound/kvhang.wav");
+                player.Load();
+                player.Play();
+                await Task.Delay(10000);
+                kvkep.Visibility = Visibility.Visible;
+                Visszaad();
+            }
+            else if (kvkep.IsVisible)
+            {
+                MessageBox.Show("Van még kitöltött kávé a gépben", "Hiba");
+            }
+            else
+            {
+                MessageBox.Show("Nincs elég pénzed, tegyél be még többet", "Hiba");
+            }
         }
 
         private void PenzNyilas_Click(object sender, RoutedEventArgs e)
@@ -89,6 +134,7 @@ namespace KaveGep
             if (ot)
             {
                 berakottpenz += 5;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -96,6 +142,7 @@ namespace KaveGep
             else if (tiz)
             {
                 berakottpenz += 10;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -103,6 +150,7 @@ namespace KaveGep
             else if (husz)
             {
                 berakottpenz += 20;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -110,6 +158,7 @@ namespace KaveGep
             else if (otven)
             {
                 berakottpenz += 50;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -117,6 +166,7 @@ namespace KaveGep
             else if (szaz)
             {
                 berakottpenz += 100;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -124,6 +174,7 @@ namespace KaveGep
             else if (ketszaz)
             {
                 berakottpenz += 200;
+                Fizetendo.Text = Convert.ToString(berakottpenz);
                 SoundPlayer player = new SoundPlayer(@"sound/coin.wav");
                 player.Load();
                 player.Play();
@@ -137,7 +188,7 @@ namespace KaveGep
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
-            Fizetendo.Text = "";
+            Visszaad();
         }
 
         private void _5ft_Click(object sender, RoutedEventArgs e)
@@ -204,12 +255,51 @@ namespace KaveGep
         {
             kvkep.Opacity = 0;
         }
-        public void Visszaad()
+        public async void Visszaad()
         {
-            do
+            while (berakottpenz != 0)
             {
-
-            } while (berakottpenz != 0);
+                if (!((berakottpenz - 200) <= 0))
+                {
+                    berakottpenz -= 200;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else if (!((berakottpenz - 100) <= 0))
+                {
+                    berakottpenz -= 100;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else if (!((berakottpenz - 50) <= 0))
+                {
+                    berakottpenz -= 50;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else if (!((berakottpenz - 20) <= 0))
+                {
+                    berakottpenz -= 20;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else if (!((berakottpenz - 10) <= 0))
+                {
+                    berakottpenz -= 10;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else if (!((berakottpenz - 5) <= 0) || berakottpenz == 5)
+                {
+                    berakottpenz -= 5;
+                    Fizetendo.Text = Convert.ToString(berakottpenz);
+                    await Task.Delay(250);
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
     }
 }

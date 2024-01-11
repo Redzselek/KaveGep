@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KaveGep"
         mc:Ignorable="d"
-        Title="MainWindow" Height="590" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Kávé gép" Height="590" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF2E2E2E">
         <Image HorizontalAlignment="Left" VerticalAlignment="Center" Height="512" Width="256" Source="/img/automata.png" Margin="10,0,0,0" />
         <Button x:Name="Gomb1" HorizontalAlignment="Left" Margin="78,80,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb1_Click">
-            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 1 120ft</TextBlock>
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kapucsínó 120ft</TextBlock>
         </Button>
         <Button x:Name="Gomb2" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb2_Click">
-            <TextBlock TextWrapping="Wrap" Height="30" Width="40" FontSize="10" TextAlignment="Center">Kávé 2 220ft</TextBlock>
+            <TextBlock TextWrapping="Wrap" Height="30" Width="40" FontSize="10" TextAlignment="Center">Espresso 220ft</TextBlock>
         </Button>
         <Button x:Name="Gomb3" HorizontalAlignment="Left" Margin="78,118,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb3_Click">
-            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 3 100ft</TextBlock>
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Doppio 100ft</TextBlock>
         </Button>
         <Button x:Name="Gomb4" HorizontalAlignment="Left" Margin="150,118,0,0" VerticalAlignment="Top" Height="30" Width="52" Background="#FF707070" BorderBrush="Black" Click="Gomb4_Click">
-            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Kávé 4 155ft</TextBlock>
+            <TextBlock TextWrapping="Wrap" Height="30" Width="46" FontSize="10" TextAlignment="Center">Ristretto 155ft</TextBlock>
         </Button>
-        <TextBlock x:Name="Fizetendo" HorizontalAlignment="Left" Margin="146,168,0,0" VerticalAlignment="Top" Height="32" Width="44" FontSize="20">
-
+        <TextBlock x:Name="Fizetendo" HorizontalAlignment="Left" Margin="138,168,0,0" VerticalAlignment="Top" Height="32" Width="52" FontSize="20">
+            0
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="182,168,0,0" VerticalAlignment="Top" Height="32" Width="24" FontSize="20">
             Ft
@@ -47,7 +47,8 @@
         <Button x:Name="_200ft" HorizontalAlignment="Left" Height="90" Margin="285,440,0,0" VerticalAlignment="Top" Width="89" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="#00000000" Click="_200ft_Click">
             <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Center" Width="85" Source="/img/200Ft.png" Stretch="Fill"/>
         </Button>
-        <Image x:Name="kvkep" HorizontalAlignment="Left" Height="100" Margin="90,309,0,0" VerticalAlignment="Top" Width="100" Source="/img/kv.png" OpacityMask="#7F000000" MouseUp="kvkep_MouseUp"/>
+        <Image x:Name="kvkep" HorizontalAlignment="Left" Height="100" Margin="90,309,0,0" VerticalAlignment="Top" Width="100" Source="/img/kv.png" OpacityMask="Black" MouseUp="kvkep_MouseUp" Cursor="Hand"/>
+
 
 
 
